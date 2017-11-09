@@ -1,0 +1,59 @@
+<html>
+
+<!-- Mirrored from www.refactoring.com/catalog/replaceParameterWithExplicitMethods.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Refactoring: 
+Replace Parameter with Explicit Methods</title>
+</head>
+<body>
+<H1>
+Replace Parameter with Explicit Methods</H1>
+<P><I><CENTER>
+
+You have a method that runs different code depending on the values of an enumerated parameter.</CENTER></I></P>
+<P><B><CENTER>
+
+Create a separate method for each value of the parameter.</CENTER></B></P>
+
+<PRE>
+	void setValue (String name, int value) {
+		if (name.equals("height")) {
+			_height = value;
+			return;
+		}
+		if (name.equals("width")) {
+			_width = value;
+			return;
+		}
+		Assert.shouldNeverReachHere();
+	}
+</PRE>
+<P><CENTER><IMG SRC="arrow.gif"></CENTER></P>
+<PRE>
+	void setHeight(int arg) {
+		_height = arg;
+	}
+	void setWidth (int arg) {
+		_width = arg;
+	}
+</PRE>
+
+
+
+<P>For more information see page 
+	<font color="#FF0000">285</font>
+	of <I>Refactoring</I>
+</P>
+
+<P></P>
+<P></P>
+<P><CENTER>
+<A HREF="http://www.refactoring.com/index.html"> | Refactoring Home |</A><A HREF="index.html"> | Alphabetical List |</A>
+</CENTER></P>
+</body>
+
+<!-- Mirrored from www.refactoring.com/catalog/replaceParameterWithExplicitMethods.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

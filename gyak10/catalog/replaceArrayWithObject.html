@@ -1,0 +1,57 @@
+<html>
+
+<!-- Mirrored from www.refactoring.com/catalog/replaceArrayWithObject.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Refactoring: 
+
+
+
+Replace Array with Object</title>
+</head>
+<body>
+
+
+<H1>
+
+
+
+Replace Array with Object</H1>
+<P><I><CENTER>
+
+You have an array in which certain elements mean
+different things.</CENTER></I></P>
+<P><B><CENTER>
+
+Replace the array with an object that has a
+field for each element.</CENTER></B></P>
+
+<PRE>
+	String[] row = new String[3];
+	row [0] = "Liverpool";
+	row [1] = "15";
+</PRE>
+<P><CENTER><IMG SRC="arrow.gif"></CENTER></P>
+<PRE>
+	Performance row = new Performance();
+	row.setName("Liverpool");
+	row.setWins("15");
+</PRE>
+
+
+<P>For more information see page 
+	<font color="#FF0000">186</font>
+	of <I>Refactoring</I>
+</P>
+
+<P></P>
+<P></P>
+<P><CENTER>
+<A HREF="http://www.refactoring.com/index.html"> | Refactoring Home |</A><A HREF="index.html"> | Alphabetical List |</A>
+</CENTER></P>
+</body>
+
+<!-- Mirrored from www.refactoring.com/catalog/replaceArrayWithObject.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

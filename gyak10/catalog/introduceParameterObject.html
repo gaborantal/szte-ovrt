@@ -1,0 +1,57 @@
+<html>
+
+<!-- Mirrored from www.refactoring.com/catalog/introduceParameterObject.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Refactoring: 
+
+
+
+Introduce Parameter Object</title>
+</head>
+<body>
+
+
+<H1>
+
+
+
+Introduce Parameter Object</H1>
+<P><I><CENTER>
+
+You have a group of parameters that naturally go together.</CENTER></I></P>
+<P><B><CENTER>
+
+Replace them with an object.</CENTER></B></P>
+
+<CENTER><IMG SRC="introParamObj.gif"></CENTER> 
+
+
+<P>For more information see page 
+	<font color="#FF0000">295</font>
+	of <I>Refactoring</I>
+</P>
+<h2>Additional Comments</h2>
+<h3>Dealing with a chain of calls</h3>
+<P>Ralph Johnson pointed out to me that a common case isn't clear in the Refactoring book. This case is when you have a bunch of methods that call each other, all of which have a clump of parameters that need this refactoring. In this case you don't want to apply Introduce Parameter Object because it would lead to lots of new objects when you only want to have one object that's passed around.
+</P>
+<P>The approach to use is to start with the head of the call chain and apply Introduce Parameter Object there. Then apply <A href="preserveWholeObject.html">
+
+
+
+Preserve Whole Object</A> to the other methods.
+</P>
+
+
+
+<P></P>
+<P></P>
+<P><CENTER>
+<A HREF="http://www.refactoring.com/index.html"> | Refactoring Home |</A><A HREF="index.html"> | Alphabetical List |</A>
+</CENTER></P>
+</body>
+
+<!-- Mirrored from www.refactoring.com/catalog/introduceParameterObject.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

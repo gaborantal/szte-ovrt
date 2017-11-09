@@ -1,0 +1,49 @@
+<html>
+
+<!-- Mirrored from www.refactoring.com/catalog/inlineMethod.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Refactoring: 
+Inline Method</title>
+</head>
+<body>
+
+
+<H1>
+Inline Method</H1>
+<P><I><CENTER>
+A method's body is just as clear as its name.</CENTER></I></P>
+<P><B><CENTER>
+Put the method's body into the body of its callers and remove the method.</CENTER></B></P>
+<PRE>
+	int getRating() {
+		return (moreThanFiveLateDeliveries()) ? 2 : 1;
+	}
+	boolean moreThanFiveLateDeliveries() {
+		return _numberOfLateDeliveries &gt; 5;
+	}
+</PRE>
+<P><CENTER><IMG SRC="arrow.gif"></CENTER></P>
+<PRE>
+	int getRating() {
+		return (_numberOfLateDeliveries &gt; 5) ? 2 : 1;
+	}
+</PRE>
+
+
+<P>For more information see page 
+	<font color="#FF0000">117</font>
+	of <I>Refactoring</I>
+</P>
+
+<P></P>
+<P></P>
+<P><CENTER>
+<A HREF="http://www.refactoring.com/index.html"> | Refactoring Home |</A><A HREF="index.html"> | Alphabetical List |</A>
+</CENTER></P>
+</body>
+
+<!-- Mirrored from www.refactoring.com/catalog/inlineMethod.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

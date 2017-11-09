@@ -1,0 +1,60 @@
+<html>
+
+<!-- Mirrored from www.refactoring.com/catalog/replaceExceptionWithTest.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Refactoring: 
+
+
+
+Replace Exception with Test</title>
+</head>
+<body>
+
+
+<H1>
+
+
+
+Replace Exception with Test</H1>
+<P><I><CENTER>
+
+You are throwing an exception on a condition the caller could have checked first.</CENTER></I></P>
+<P><B><CENTER>
+
+Change the caller to make the test first.</CENTER></B></P>
+
+<PRE>
+	double getValueForPeriod (int periodNumber) {
+		try {
+			return _values[periodNumber];
+		} catch (ArrayIndexOutOfBoundsException e) {
+			return 0;
+		}
+	}
+</PRE>
+<P><CENTER><IMG SRC="arrow.gif"></CENTER></P>
+<PRE>
+	double getValueForPeriod (int periodNumber) {
+		if (periodNumber &gt;= _values.length) return 0;
+		return _values[periodNumber];
+	}
+</PRE>
+
+
+<P>For more information see page 
+	<font color="#FF0000">315</font>
+	of <I>Refactoring</I>
+</P>
+
+<P></P>
+<P></P>
+<P><CENTER>
+<A HREF="http://www.refactoring.com/index.html"> | Refactoring Home |</A><A HREF="index.html"> | Alphabetical List |</A>
+</CENTER></P>
+</body>
+
+<!-- Mirrored from www.refactoring.com/catalog/replaceExceptionWithTest.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

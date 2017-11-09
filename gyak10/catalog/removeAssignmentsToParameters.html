@@ -1,0 +1,45 @@
+<html>
+
+<!-- Mirrored from www.refactoring.com/catalog/removeAssignmentsToParameters.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Refactoring: 
+Remove Assignments to Parameters</title>
+</head>
+<body>
+
+
+<H1>
+Remove Assignments to Parameters</H1>
+<P><I><CENTER>
+The code assigns to a parameter.</CENTER></I></P>
+<P><B><CENTER>
+Use a temporary variable instead.</CENTER></B></P>
+<PRE>
+	int discount (int inputVal, int quantity, int yearToDate) {
+		if (inputVal &gt; 50) inputVal -= 2;
+</PRE>
+<P><CENTER><IMG SRC="arrow.gif"></CENTER></P>
+<PRE>
+	int discount (int inputVal, int quantity, int yearToDate) {
+		int result = inputVal;
+		if (inputVal &gt; 50) result -= 2;
+</PRE>
+
+
+<P>For more information see page 
+	<font color="#FF0000">131</font>
+	of <I>Refactoring</I>
+</P>
+
+<P></P>
+<P></P>
+<P><CENTER>
+<A HREF="http://www.refactoring.com/index.html"> | Refactoring Home |</A><A HREF="index.html"> | Alphabetical List |</A>
+</CENTER></P>
+</body>
+
+<!-- Mirrored from www.refactoring.com/catalog/removeAssignmentsToParameters.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

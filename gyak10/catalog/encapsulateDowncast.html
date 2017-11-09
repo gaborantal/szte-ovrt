@@ -1,0 +1,56 @@
+<html>
+
+<!-- Mirrored from www.refactoring.com/catalog/encapsulateDowncast.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Refactoring: 
+
+
+
+Encapsulate Downcast</title>
+</head>
+<body>
+
+
+<H1>
+
+
+
+Encapsulate Downcast</H1>
+<P><I><CENTER>
+
+A method returns an object that needs to be downcasted
+by its callers.</CENTER></I></P>
+<P><B><CENTER>
+
+Move the downcast to within the method.</CENTER></B></P>
+
+<PRE>
+Object lastReading() {
+	return readings.lastElement();
+}
+</PRE>
+<P><CENTER><IMG SRC="arrow.gif"></CENTER></P>
+<PRE>
+Reading lastReading() {
+	return (Reading) readings.lastElement();
+}
+</PRE>
+
+
+<P>For more information see page 
+	<font color="#FF0000">308</font>
+	of <I>Refactoring</I>
+</P>
+
+<P></P>
+<P></P>
+<P><CENTER>
+<A HREF="http://www.refactoring.com/index.html"> | Refactoring Home |</A><A HREF="index.html"> | Alphabetical List |</A>
+</CENTER></P>
+</body>
+
+<!-- Mirrored from www.refactoring.com/catalog/encapsulateDowncast.html by HTTrack Website Copier/3.x [XR&CO'2007], Sun, 16 Nov 2008 16:23:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
